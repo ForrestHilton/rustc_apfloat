@@ -1,3 +1,5 @@
+use num_traits::Zero;
+
 use crate::{Category, ExpInt, IEK_INF, IEK_NAN, IEK_ZERO};
 use crate::{Float, FloatConvert, ParseError, Round, Status, StatusAnd};
 
@@ -3208,4 +3210,17 @@ mod sig {
 
         lost_fraction(dividend, divisor)
     }
+}
+
+use core::ops::Add;
+impl<S: Semantics> Add for IeeeFloat<S> {
+    type Output = IeeeFloat<S>;
+    fn add() {}
+}
+
+impl<S: Semantics> Zero for IeeeFloat<S> {
+    fn is_zero(&self) -> bool {
+        todo!()
+    }
+    fn zero() -> Self {}
 }

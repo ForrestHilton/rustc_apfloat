@@ -17,6 +17,7 @@ description = "Rust port of C++ llvm::APFloat library"
 [dependencies]
 bitflags = "1.3.2"
 smallvec = { version = "1.11.0", features = ["const_generics", "union"] }
+num-traits = "0.2.18"
 
 [dev-dependencies]
 criterion = { version = "0.5.1", features = ["html_reports"] }
